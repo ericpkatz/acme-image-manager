@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import ImageForm from './ImageForm';
+import { destroyImage } from '../store';
 
 export const Images = props => {
-  const {user, images} = props
+  const {user, images, destroyImage} = props
 
   return (
     <div>
@@ -18,7 +19,7 @@ export const Images = props => {
               <br />
               uploaded by {image.user.id === user.id ? 'YOU' : image.user.email}
               {
-                image.user.id === user.id && <button>x</button>
+                image.user.id === user.id && <button onClick={()=> destroyImage(image)}>x</button>
               }
             </li>
           )
@@ -38,4 +39,10 @@ const mapState = state => {
   }
 }
 
-export default connect(mapState)(Images)
+const mapDispatchToProps = dispatch => {
+  return {
+    destroyImage: (image)=> dispatch(destroyImage(image))
+  };
+}
+
+export default connect(mapState, mapDispatchToProps)(Images)
