@@ -10,7 +10,8 @@ async function seed() {
 
   const users = await Promise.all([
     User.create({email: 'moe@email.com', password: '123'}),
-    User.create({email: 'lucy@email.com', password: '123'})
+    User.create({email: 'lucy@email.com', password: '123'}),
+    User.create({email: 'ethyl@email.com', password: '123'})
   ])
 
   const png = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACAQMAAACjTyRkAAAABlBMVEVm/5n/zACoMZCFAAAADElEQVQI12NgYGgAAACEAIEYVvHNAAAAAElFTkSuQmCC`

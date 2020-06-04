@@ -16,8 +16,10 @@ export const Images = props => {
             <li key={image.id}>
               <a href={image.URL}>{image.id}</a>
               <br />
-              uploaded by {image.user.email}
-              <h2>Todo X</h2>
+              uploaded by {image.user.id === user.id ? 'YOU' : image.user.email}
+              {
+                image.user.id === user.id && <button>x</button>
+              }
             </li>
           )
         })}

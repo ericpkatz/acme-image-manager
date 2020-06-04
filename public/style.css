@@ -2,6 +2,11 @@ body {
   font-family: sans-serif;
 }
 
+button, input {
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -19,3 +24,28 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px dodgerBlue;
+}
+form > * {
+  margin: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0
+}
+
+li {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px dodgerBlue;
+  padding: 1rem;
+}
+
+
