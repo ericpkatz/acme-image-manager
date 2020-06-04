@@ -1,6 +1,10 @@
 body {
   font-family: sans-serif;
 }
+img {
+  display: block;
+  width: 100px;
+}
 
 button, input {
   height: 3rem;

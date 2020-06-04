@@ -15,7 +15,7 @@ export const Images = props => {
         {images.map(image => {
           return (
             <li key={image.id}>
-              <a href={image.URL}>{image.id}</a>
+              <img src={image.URL} />
               <br />
               uploaded by {image.user.id === user.id ? 'YOU' : image.user.email}
               {
