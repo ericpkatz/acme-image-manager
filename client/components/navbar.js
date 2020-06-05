@@ -6,7 +6,7 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn, images, user}) => (
   <div>
-    <h1>Acme Image Uploader</h1>
+    <h1>Acme Resource Manager</h1>
     <nav>
       <Link to="/images">Images ({images.length})</Link>
       {isLoggedIn ? (
